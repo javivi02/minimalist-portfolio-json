@@ -7,7 +7,7 @@ import { education } from '../../../cv.json'
 <Section title="Educación">
   <ul>
     {
-      education.map(({ image, institution, startDate, endDate, area }) => {
+      education.map(({ image, institution, startDate, endDate, area, url }) => {
         const startYear = new Date(startDate).getFullYear()
         const endYear =
           endDate != null ? new Date(endDate).getFullYear() : 'Actual'
@@ -19,7 +19,9 @@ import { education } from '../../../cv.json'
               <header>
                 <div>
                   <img src={image} alt={institution}/>
-                  <h3>{institution}</h3>
+                  <a href={url} title={`Ver ${institution}`} target="_blank">
+                    <h3>{institution}</h3>
+                  </a>
                 </div>
 
                 <time>{years}</time>
@@ -73,6 +75,10 @@ import { education } from '../../../cv.json'
     margin-right: 8px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+  }
+
+  a:hover{
+    text-decoration: underline;
   }
 
   @media (width <= 700px) {
