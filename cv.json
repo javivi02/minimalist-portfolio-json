@@ -3,8 +3,8 @@
     "name": "Paula Sainz-Pardo Hilara",
     "label": "Periodista con más de 10 años de experiencia en medios de comunicación",
     "image": "https://static.eldiario.es/clip/0afa8f03-096a-4bb1-9aa1-3869ee1d4793_16-9-aspect-ratio_default_0.jpg",
-    "email": "paulasainzpardo@gmail.com",
-    "phone": "+34 688888888",
+    "email": "",
+    "phone": "",
     "url": "https://paulasainzpardo.es",
     "summary": "+10 años de experiencia en medios de comunicación. Actualmente trabajo en RTVE como presentadora del canal 24 Horas. Vivo en Madrid, España. He trabajado también en otras cadena de comunicación y en prensa del congreso de los diputados.",
     "location": {
@@ -34,33 +34,59 @@
   },
   "work": [
     {
-      "name": "midudev",
-      "position": "Divulgador sobre Programación Web",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2021-01-01",
+      "image": "/rtve_logo.webp",
+      "name": "Radio Televión Española",
+      "position": "Presentadora en el canal 24 Horas",
+      "url": "https://www.rtve.es/",
+      "startDate": "2023-07-01",
       "endDate": null,
-      "summary": "Streamer de programación más visto en Español en Twitch. +1 millón de seguidores entre todas mis redes sociales. Reconocido por Google, Microsoft y GitHub por mi impacto en la comunidad de desarrolladores.",
+      "summary": "Presentadora en turno de mañana del canal 24 Horas. Informativo con entrevistas, directos y actualidad del día.",
       "highlights": [
         "Started the company"
       ]
     },
     {
-      "name": "Adevinta",
-      "position": "Lead Frontend Architect",
+      "image": "/rtve_logo.webp",
+      "name": "Radio Televión Española",
+      "position": "Presentadora y subdirectora de Culturas 2",
       "url": "https://twitch.tv/midudev",
-      "startDate": "2016-06-01",
-      "endDate": "2022-09-01",
-      "summary": "Lideré una convergencia técnica entre diferentes productos y migramos una arquitectura monolítica a otra más flexible y optimizada. Fomenté buenas prácticas y mejoras en la cultura de rendimiento, además de la entrega rápida de valor a los usuarios.",
+      "startDate": "2022-09-01",
+      "endDate": "2023-07-01",
+      "summary": "Presentadora y subdirectora del programa informativo cultural Culturas 2. Entrevistas, reportajes, actualidad cultural, selección de libros, música y cine.",
       "highlights": [
         "Started the company"
       ]
     },
     {
-      "name": "Hubii",
-      "position": "Senior FrontEnd Developer",
-      "startDate": "2011-03-01",
-      "endDate": "2016-05-01",
-      "summary": "Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día. Recorté los tiempos de entrega y despliegues a producción a la mitad. Colaboré con Mozilla y Telefónica para desarrollar la primera app para televisores con FirefoxOS.",
+      "image": "/rtve_logo.webp",
+      "name": "Radio Televión Española",
+      "position": "Presentadora y redactora en la 2 Noticias",
+      "url": "https://twitch.tv/midudev",
+      "startDate": "2022-09-01",
+      "endDate": "2023-07-01",
+      "summary": "Presentadora y redactora en el informativo cultural de la 2 Noticias. Entrevistas, reportajes, actualidad cultural y directos de música.",
+      "highlights": [
+        "Started the company"
+      ]
+    },
+    {
+      "image": "/congreso.webp",
+      "name": "Congreso de los diputados",
+      "position": "Periodista en Gavinete de prensa Nacional",
+      "startDate": "2018-02-01",
+      "endDate": "2018-10-01",
+      "summary": "Periodista en el gabinete de prensa del congreso de los diputados. Redactaba notas de prensa, organizaba ruedas de prensa y gestionaba la comunicación del congreso.",
+      "highlights": [
+        "Started the company"
+      ]
+    },
+    {
+      "image": "/mediaset.webp",
+      "name": "Mediaset España",
+      "position": "Redactora en las Mañanas de Cuatro",
+      "startDate": "2017-12-01",
+      "endDate": "2018-01-01",
+      "summary": "Para el programa informtivo de las mañanas de cuatro, redactaba noticias y reportajes.",
       "highlights": [
         "Started the company"
       ]
@@ -78,15 +104,16 @@
     ]
   }],
   "education": [{
-    "institution": "Universitat Oberta de Catalunya",
-    "url": "https://www.uoc.edu/portal/es/index.html",
-    "area": "Ingeniero de Software",
+    "image": "/UniversidadReyJuanCarlos.webp",
+    "institution": "Universidad Rey Juan Carlos",
+    "url": "https://www.urjc.es/",
+    "area": "Licenciada en Ciencias de la información, Periodismo.",
     "studyType": "Bachelor",
-    "startDate": "2003-01-01",
-    "endDate": "2009-01-01",
+    "startDate": "2008-01-01",
+    "endDate": "2012-01-01",
     "score": "4.0",
     "courses": [
-      "DB1101 - Basic SQL"
+      ""
     ]
   }],
   "awards": [{
@@ -110,80 +137,38 @@
   }],
   "skills": [
     {
-      "name": "HTML",
+      "name": "iNews",
       "level": "Master",
       "keywords": [
-        "Desarrollo Web", "Frontend"
+        "Edicion de noticias", "Avid"
       ]
     },
     {
-      "name": "CSS",
+      "name": "Media Central Cloud UX",
       "level": "Master",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Diseño Responsive"
+        "Edicion de noticias", "Avid"
       ]
     },
     {
-      "name": "JavaScript",
+      "name": "Media Composer",
       "level": "Master",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+        "Montaje de videos", "Avid"
       ]
     },
     {
-      "name": "Tailwind",
+      "name": "Word",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+        "Ofimática", "Microsoft"
       ]
     },
     {
-      "name": "TypeScript",
+      "name": "Excel",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
-      ]
-    },
-    {
-      "name": "Node",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Backend", "JavaScript", "Servidor"
-      ]
-    },
-    {
-      "name": "MySQL",
-      "level": "Avanzado",
-      "keywords": [
-        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
-      ]
-    },
-    {
-      "name": "Git",
-      "level": "Avanzado",
-      "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente"
-      ]
-    },
-    {
-      "name": "GitHub",
-      "level": "Avanzado",
-      "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente", "Git"
-      ]
-    },
-    {
-      "name": "Next.js",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
-      ]
-    },
-    {
-      "name": "React",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
+        "Ofimática", "Microsoft"
       ]
     }
   ],

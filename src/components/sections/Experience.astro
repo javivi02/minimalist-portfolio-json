@@ -1,18 +1,20 @@
 ---
-import Section from "../Section.astro"
+import Section from '../Section.astro'
 
-import { work } from "@cv"
+import { work } from '../../../cv.json'
 ---
 
 <Section title="Experiencia laboral">
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
+        ({ image, name, startDate, endDate, position, summary, highlights, url}) => {
           const startYear = new Date(startDate).getFullYear()
           const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Actual"
+            endDate != null ? new Date(endDate).getFullYear() : 'Actual'
           const years = `${startYear} - ${endYear}`
+
+          console.log(image)
 
           return (
             <li>
@@ -20,6 +22,7 @@ import { work } from "@cv"
                 <header>
                   <div>
                     <h3>
+                      <img src={image} alt="Imagen corporativa de RTVE">
                       <a href={url} title={`Ver ${name}`} target="_blank">
                         {name}
                       </a>
@@ -43,46 +46,62 @@ import { work } from "@cv"
 </Section>
 
 <style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: #111;
-  }
-
-  article a {
-    color: #111;
-  }
-
-  article a:hover {
-    text-decoration: underline;
-  }
-
-  article h4 {
-    color: #222;
-    font-weight: 400;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 4px;
-  }
-
-  time {
-    color: #555;
-    font-size: 0.85rem;
-    min-width: 102px;
-  }
-
-  @media (width <= 700px) {
-    time {
-      text-align: right;
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
     }
-  }
+
+    article h3 {
+        font-weight: 500;
+        color: #111;
+    }
+
+    article a {
+        color: #111;
+    }
+
+    article a:hover {
+        text-decoration: underline;
+    }
+
+    article h4 {
+        color: #222;
+        font-weight: 400;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 4px;
+    }
+
+    time {
+        color: #555;
+        font-size: 0.85rem;
+        min-width: 102px;
+    }
+
+    h3{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+    }
+
+    img {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        margin-right: 8px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    @media (width <= 700px) {
+        time {
+            text-align: right;
+        }
+    }
 </style>
