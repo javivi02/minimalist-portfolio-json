@@ -15,5 +15,8 @@
     "canvas-confetti": "^1.9.2",
     "ninja-keys": "1.2.2",
     "typescript": "5.3.3"
+  },
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.6.4"
   }
 }
