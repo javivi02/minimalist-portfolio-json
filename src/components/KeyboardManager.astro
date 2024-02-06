@@ -1,6 +1,6 @@
 ---
-import { type SocialIcon } from "@/types"
-import { basics } from "../../cv.json"
+import { type SocialIcon } from '@/types'
+import { basics } from '../../cv.json'
 
 const { profiles } = basics
 
@@ -39,7 +39,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
 
   return {
     id: network,
-    section: "Social",
+    section: 'Social',
     title: `Visitar ${network}`,
     url,
     icon,
@@ -53,23 +53,32 @@ const profilesInfo = profiles.map(({ network, url }) => {
 </footer>
 
 <div id="footer-button" class="no-print">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    class="icon icon-tabler icon-tabler-command"
-    width="32"
-    height="32"
-    viewBox="0 0 24 24"
-    stroke-width="1.5"
-    stroke="#777"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="32" height="32"
+       viewBox="0 0 24 24" stroke-width="1.2" stroke="#777" fill="none" stroke-linecap="round"
+       stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
     <path
-      d="M7 9a2 2 0 1 1 2 -2v10a2 2 0 1 1 -2 -2h10a2 2 0 1 1 -2 2v-10a2 2 0 1 1 2 2h-10"
-    ></path>
+      d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"/>
   </svg>
+
+  <!--<svg-->
+  <!--  xmlns="http://www.w3.org/2000/svg"-->
+  <!--  class="icon icon-tabler icon-tabler-command"-->
+  <!--  width="32"-->
+  <!--  height="32"-->
+  <!--  viewBox="0 0 24 24"-->
+  <!--  stroke-width="1.5"-->
+  <!--  stroke="#777"-->
+  <!--  fill="none"-->
+  <!--  stroke-linecap="round"-->
+  <!--  stroke-linejoin="round"-->
+  <!--&gt;-->
+  <!--  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>-->
+  <!--  <path-->
+  <!--    d="M7 9a2 2 0 1 1 2 -2v10a2 2 0 1 1 -2 -2h10a2 2 0 1 1 -2 2v-10a2 2 0 1 1 2 2h-10"-->
+  <!--  ></path>-->
+  <!--</svg>-->
 </div>
 
 <ninja-keys
@@ -79,8 +88,8 @@ const profilesInfo = profiles.map(({ network, url }) => {
 </ninja-keys>
 
 <script>
-  import "ninja-keys"
-  import confetti from "canvas-confetti"
+  import 'ninja-keys'
+  import confetti from 'canvas-confetti'
 
   // confetti()
 
@@ -93,14 +102,14 @@ const profilesInfo = profiles.map(({ network, url }) => {
     hotkey: string
   }
 
-  const ninja = document.querySelector("ninja-keys")
-  const footerButton = document.getElementById("footer-button")
+  const ninja = document.querySelector('ninja-keys')
+  const footerButton = document.getElementById('footer-button')
 
-  footerButton?.addEventListener("click", () => {
+  footerButton?.addEventListener('click', () => {
 
-    var event = new KeyboardEvent("keydown", {
-      key: "K",
-      code: "KeyK",
+    var event = new KeyboardEvent('keydown', {
+      key: 'K',
+      code: 'KeyK',
       keyCode: 75,
       which: 75,
       ctrlKey: true,
@@ -110,13 +119,13 @@ const profilesInfo = profiles.map(({ network, url }) => {
     })
 
     confetti()
-    console.log("footerButton clicked")
+    console.log('footerButton clicked')
 
     document.dispatchEvent(event)
   })
 
   if (ninja != null) {
-    const info = ninja.getAttribute("data-info") ?? "[]"
+    const info = ninja.getAttribute('data-info') ?? '[]'
     const parsedInfo = JSON.parse(info)
 
     const data = parsedInfo.map(
@@ -128,7 +137,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
           hotkey,
           section,
           handler: () => {
-            window.open(url, "_blank")
+            window.open(url, '_blank')
           },
         }
       }
@@ -153,75 +162,75 @@ const profilesInfo = profiles.map(({ network, url }) => {
 </script>
 
 <style>
-  @media print {
-    ninja-keys {
-      display: none !important;
-    }
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @media (min-width: 601px) {
-    #normal-footer {
-      display: block;
+    @media print {
+        ninja-keys {
+            display: none !important;
+        }
     }
 
-    #footer-button {
-      display: none;
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
-  }
 
-  @media (max-width: 600px) {
-    #normal-footer {
-      display: none;
+    @media (min-width: 601px) {
+        #normal-footer {
+            display: block;
+        }
+
+        #footer-button {
+            display: none;
+        }
     }
 
-    #footer-button {
-      background: #fff;
-      position: fixed;
-      border: 1px solid #eee;
-      right: 10px;
-      bottom: 10px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
+    @media (max-width: 600px) {
+        #normal-footer {
+            display: none;
+        }
+
+        #footer-button {
+            background: #fff;
+            position: fixed;
+            border: 1px solid #eee;
+            right: 10px;
+            bottom: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
     }
-  }
 
-  footer {
-    background: var(--color_footer);
-    border-top: 1px solid #eee;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    padding-block: 8px;
-    text-align: center;
-    font-size: 0.85rem;
+    footer {
+        background: var(--color_footer);
+        border-top: 1px solid #eee;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        padding-block: 8px;
+        text-align: center;
+        font-size: 0.85rem;
 
-    view-timeline-name: --revealing;
-    view-timeline-axis: block;
+        view-timeline-name: --revealing;
+        view-timeline-axis: block;
 
-    animation: linear 0.3s fadeIn;
-    animation-timeline: --revealing;
-    animation-range: entry 100% cover 10%;
-  }
+        animation: linear 0.3s fadeIn;
+        animation-timeline: --revealing;
+        animation-range: entry 100% cover 10%;
+    }
 
-  kbd {
-    color: #000000;
-    background: #eee;
-    border-radius: 4px;
-    padding: 2px 4px;
-    font-size: 12px;
-  }
+    kbd {
+        color: #000000;
+        background: #eee;
+        border-radius: 4px;
+        padding: 2px 4px;
+        font-size: 12px;
+    }
 </style>
