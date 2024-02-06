@@ -11,6 +11,9 @@ dependencies:
   astro:
     specifier: 4.2.8
     version: 4.2.8(typescript@5.3.3)
+  canvas-confetti:
+    specifier: ^1.9.2
+    version: 1.9.2
   ninja-keys:
     specifier: 1.2.2
     version: 1.2.2
@@ -1157,6 +1160,10 @@ packages:
 
   /caniuse-lite@1.0.30001581:
     resolution: {integrity: sha512-whlTkwhqV2tUmP3oYhtNfaWGYHDdS3JYFQBKXxcUR9qqPWsRhFHhoISO2Xnl/g0xyKzht9mI1LZpiNWfMzHixQ==}
+    dev: false
+
+  /canvas-confetti@1.9.2:
+    resolution: {integrity: sha512-6Xi7aHHzKwxZsem4mCKoqP6YwUG3HamaHHAlz1hTNQPCqXhARFpSXnkC9TWlahHY5CG6hSL5XexNjxK8irVErg==}
     dev: false
 
   /ccount@2.0.1:

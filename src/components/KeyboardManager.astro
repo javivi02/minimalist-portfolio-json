@@ -75,10 +75,12 @@ const profilesInfo = profiles.map(({ network, url }) => {
 <ninja-keys
   data-info={JSON.stringify(profilesInfo)}
   placeholder="Redes sociales ..."
-  hideBreadcrumbs></ninja-keys>
+  hideBreadcrumbs>
+</ninja-keys>
 
 <script>
   import "ninja-keys"
+  import confetti from "canvas-confetti"
 
   interface Info {
     id: string
@@ -93,6 +95,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
   const footerButton = document.getElementById("footer-button")
 
   footerButton?.addEventListener("click", () => {
+
     var event = new KeyboardEvent("keydown", {
       key: "K",
       code: "KeyK",
@@ -103,6 +106,9 @@ const profilesInfo = profiles.map(({ network, url }) => {
       shiftKey: false,
       metaKey: false,
     })
+
+    confetti()
+    console.log("footerButton clicked")
 
     document.dispatchEvent(event)
   })
